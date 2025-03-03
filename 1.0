@@ -1,50 +1,50 @@
 using System;
-using Math;
  
 namespace Calculator
 {
     class Program
     {
-    float a, b;
-        static void Main(string[] args)
-		    {
-			    int choiceNumber;
+   	float a, b;
+        private static void Main()
+	{
+		int choiceNumber;
+		
+		Choice();
+		choiсeNumber = int.Parse(Console.ReadLine());
  
-			    Choice();
- 
-			    switch(choiceNumber)
-			    {
-			      case 1:
-					  Messege();
-				  	return a + b;
-		  		case 2:
-		  			Messege();
-			  		return a - b;
-		  		case 3:
-		  			Messege();
-		  			return a * b;
-		  		case 4:
-			  		Messege();
-  					return a / b;
-		  		case 5:
-			  		Messege();
-			  		return Math.Pow(a,b);
-		  		case 6:
-			  		Concole.WriteLine("Введите число:");
-			  		a = float.Parse(Concole.Readline());
-			  		return Math.Sqrt(a);
-		  	}
-          }
-   
-	  	private void Choice()
-	  	{
-	  		Concole.WriteLine("Выберите действие: \n1. Сложение \n2. Вычитание \n3. Умножение \n4. Деление \n5. Возведение в степень \n6. Квадратный корень");
-  		}
-  		private void Messege()
-	  	{
-		  	Concole.WriteLine("Введите число A и B:");
-		  			a = float.Parse(Concole.Readline("Число - A:"));
-		  			b = float.Parse(Concole.Readline("Число - B:"));
+		switch(choiceNumber)
+		{
+	  	  case 1:
+			Messege();
+			return a + b;
+		  case 2:
+		  	Messege();
+			return a - b;
+		  case 3:
+		  	Messege();
+		  	return a * b;
+		  case 4:
+			 Messege();
+  			 return a / b;
+		  case 5:
+			  Messege();
+			  return Math.Pow(a,b);
+		  case 6:
+			  Concole.WriteLine("Введите число:");
+			  a = float.Parse(Console.ReadLine());
+			  return Math.Sqrt(a);
 		  }
+          }
+
+	 private void Choice()
+	 {
+		Concole.WriteLine("Выберите действие: \n1. Сложение \n2. Вычитание \n3. Умножение \n4. Деление \n5. Возведение в степень \n6. Квадратный корень");
+  	 }
+  	 private void Messege()
+	 {
+		Console.WriteLine("Введите число A и B:");
+		a = float.Parse(Console.ReadLine());
+		b = float.Parse(Console.ReadLine());
+	}
     }
 }
